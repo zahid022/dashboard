@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/font.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+</head>
+
+<body>
+    <!--******************* header start ***********************-->
+    <header>
+        <div class="container">
+            <!--******************* navbar start ********************-->
+            <nav id="navbar">
+                <div id="logo-box">
+                    <div id="nav-btn-box">
+                        <button onclick="showSide()" id="nav-btn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <a href="index.htm" id="logo">
+                        <img id="small-logo" src="src/img/TestLogo-small.png" alt="Logo" />
+                        <img id="large-logo" src="src/img/TestLogo.png" alt="Logo" />
+                    </a>
+                </div>
+                <div id="nav-menu-box">
+                    <ul id="nav-menu">
+                        <li class="body-emphasized-14pt nav-menu-links">
+                            <a href="#">
+                                <span class="nav-menu-img">
+                                    <img src="src/img/home_FILL0_wght300_GRAD0_opsz24.svg" alt="Home Img" />
+                                </span>
+                                <span class="nav-menu-text">Overview</span>
+                            </a>
+                        </li>
+                        <li class="body-emphasized-14pt nav-menu-links">
+                            <a href="#">
+                                <span class="nav-menu-img">
+                                    <img src="src/img/group_FILL0_wght300_GRAD0_opsz24.svg" alt="Group Img" />
+                                </span>
+                                <span class="nav-menu-text">Patients</span>
+                            </a>
+                        </li>
+                        <li class="body-emphasized-14pt nav-menu-links">
+                            <a href="#">
+                                <span class="nav-menu-img">
+                                    <img src="src/img/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
+                                        alt="Calendar Img" />
+                                </span>
+                                <span class="nav-menu-text">Schedule</span>
+                            </a>
+                        </li>
+                        <li class="body-emphasized-14pt nav-menu-links">
+                            <a href="#">
+                                <span class="nav-menu-img">
+                                    <img src="src/img/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg" alt="Chat Img" />
+                                </span>
+                                <span class="nav-menu-text">Message</span>
+                            </a>
+                        </li>
+                        <li class="body-emphasized-14pt nav-menu-links">
+                            <a href="#">
+                                <span class="nav-menu-img">
+                                    <img src="src/img/credit_card_FILL0_wght300_GRAD0_opsz24.svg" alt="Credit Img" />
+                                </span>
+                                <span class="nav-menu-text">Transactions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="dr-box">
+                    <div id="dr-img">
+                        <img src="src/img/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png"
+                            alt="Senior Woman Doctor" />
+                    </div>
+                    <div id="dr-text">
+                        <p class="body-emphasized-14pt">Dr. Jose Simmons</p>
+                        <span class="body-secondary-info-14pt">General Practitioner</span>
+                    </div>
+                    <div id="settings-img">
+                        <img src="src/img/settings_FILL0_wght300_GRAD0_opsz24.png" alt="Settings Img" />
+                        <img src="src/img/more_vert_FILL0_wght300_GRAD0_opsz24.png" alt="More img" />
+                    </div>
+                </div>
+            </nav>
+            <!--******************* navbar end ********************-->
+        </div>
+    </header>
+    <!--****************** header end ************************-->
+
+    <!--****************** sidebar start ************************-->
+    <div id="sidebar">
+        <div id="side-left">
+            <div id="side-box">
+                <div id="side-title">
+                    <h2 class="card-title-24pt">Patients</h2>
+                    <img src="src/img/search_FILL0_wght300_GRAD0_opsz24.svg" alt="Search Icon" />
+                </div>
+                <ul id="patient-content"></ul>
+            </div>
+        </div>
+        <div onclick="showSide()" id="side-right"></div>
+    </div>
+    <!--****************** sidebar end ************************-->
+
+    <!--******************* main start ***********************-->
+    <main>
+        <div id="content-div">
+            <!--************************** main left start ******************************-->
+            <div id="main-left">
+                <div id="side-box" class="patient-box">
+                    <div id="side-title">
+                        <h2 class="card-title-24pt">Patients</h2>
+                        <img src="src/img/search_FILL0_wght300_GRAD0_opsz24.svg" alt="Search Icon" />
+                    </div>
+                    <ul id="side-content"></ul>
+                </div>
+            </div>
+            <!--************************** main left end ******************************-->
+            <!--************************** main center start ******************************-->
+            <div id="main-center">
+                <div id="diagnosis">
+                    <h2 class="card-title-24pt">Diagnosis History</h2>
+                    <div id="blood-box">
+                        <div id="blood">
+                            <div id="blood-title">
+                                <h3 class="inner-card-title-18pt">Blood Pressure</h3>
+                                <p class="body-regular-14">Last 6 months</p>
+                            </div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div id="statistics">
+                            <div id="systolic-box"></div>
+                            <div id="diastolic-box"></div>
+                        </div>
+                    </div>
+                    <div id="temp-box">
+                        <div id="respiratory-box">
+                            <div id="respiratory"></div>
+                        </div>
+                        <div id="temperature-box">
+                            <div id="temperature"></div>
+                        </div>
+                        <div id="heart-box">
+                            <div id="heart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="diagnostic-list">
+                    <div id="diag-title">
+                        <h2 class="card-title-24pt">Diagnostic List</h2>
+                    </div>
+                    <div id="diag-table">
+                        <p class="body-emphasized-14pt">Problem</p>
+                        <div class="body-emphasized-14pt">Description</div>
+                        <span class="body-emphasized-14pt">Status</span>
+                    </div>
+                    <ul id="diag-list"></ul>
+                </div>
+            </div>
+            <!--************************** main center end ******************************-->
+            <!--************************** main right start ******************************-->
+            <div id="main-right">
+                <div id="pasietn-profile"></div>
+                <div id="lab-results-box">
+                    <h2 class="card-title-24pt">Lab Results</h2>
+                    <ul id="lab-results"></ul>
+                </div>
+            </div>
+            <!--************************** main right start ******************************-->
+        </div>
+    </main>
+    <!--******************* main end ***********************-->
+
+    <!--******************* footer start ***********************-->
+    <footer>
+        <p class="inner-card-title-18pt">&copy; 2024</p>
+    </footer>
+    <!--******************* footer end ***********************-->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,529 @@
+:root {
+    /* Colors: */
+    --unnamed-color-705aaa: #705AAA;
+    --unnamed-color-cbc8d4: #CBC8D4;
+    --activestate_bg_2: #D8FCF7;
+    --activestate_bg_1: #01F0D0;
+    --unnamed-color-0bd984: #0BD984;
+    --unnamed-color-072635: #072635;
+    --unnamed-color-0c3d5d: #0C3D5D;
+    --unnamed-color-084c77: #084C77;
+    --unnamed-color-055a92: #055A92;
+    --unnamed-color-006aac: #006AAC;
+    --unnamed-color-007bc7: #007BC7;
+    --unnamed-color-707070: #707070;
+    --unnamed-color-f6f6f6: #F6F6F6;
+    --unnamed-color-ededed: #EDEDED;
+    --unnamed-color-000000: #000000;
+    --unnamed-color-878787: #878787;
+    --unnamed-color-ffffff: #FFFFFF;
+    --unnamed-color-ff6200: #FF6200;
+
+    /* Font/text values */
+    --unnamed-font-family-manrope: Manrope;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-800: 800px;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-weight-bold: bold;
+    --unnamed-font-size-14: 14px;
+    --unnamed-font-size-18: 18px;
+    --unnamed-font-size-24: 24px;
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-line-spacing-19: 19px;
+    --unnamed-line-spacing-24: 24px;
+    --unnamed-line-spacing-33: 33px;
+    --unnamed-text-transform-titlecase: titlecase;
+    --border-radius : 16px;
+}
+
+/* Character Styles */
+.card-title-24pt {
+    font-family: var(--unnamed-font-family-manrope);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-800);
+    font-size: var(--unnamed-font-size-24);
+    line-height: var(--unnamed-line-spacing-33);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+}
+
+.inner-card-title-18pt {
+    font-family: var(--unnamed-font-family-manrope);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-bold);
+    font-size: var(--unnamed-font-size-18);
+    line-height: var(--unnamed-line-spacing-24);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+    text-transform: var(--unnamed-text-transform-titlecase);
+}
+
+.body-emphasized-14pt {
+    font-family: var(--unnamed-font-family-manrope);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-bold);
+    font-size: var(--unnamed-font-size-14);
+    line-height: var(--unnamed-line-spacing-19);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+}
+
+.body-secondary-info-14pt {
+    font-family: var(--unnamed-font-family-manrope);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-14);
+    line-height: var(--unnamed-line-spacing-19);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-707070);
+}
+
+.body-regular-14 {
+    font-family: var(--unnamed-font-family-manrope);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-14);
+    line-height: var(--unnamed-line-spacing-19);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F6F7F8;
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+}
+
+/* ******************* header start *********************** */
+header{
+    padding: 8px 16px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo-box,#nav-menu,.nav-menu-links>a,#dr-box{
+    display: flex;
+    align-items: center;
+}
+#nav-btn{
+    background-color: transparent;
+    border: 0;
+    font-size: var(--unnamed-font-size-18);
+    color: var(--unnamed-color-707070);
+    cursor: pointer;
+    padding: 4px 8px 4px 0
+}
+.nav-menu-links{
+    padding: 8px 6px;
+    margin: 0 4px;
+    border-radius: 50px;
+    transition: .3s;
+    cursor: pointer;
+}
+.nav-menu-links:hover{
+    background: var(--activestate_bg_1);
+}
+.nav-menu-text, #dr-text,#settings-img,#large-logo{
+    display: none;
+}
+/* ******************* header end *********************** */
+
+/* ******************* sidebar start *********************** */
+#sidebar{
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    height: 100vh;
+    display: flex;
+    transform: translateX(-300%);
+}
+.sidebar-active{
+    transform: translateX(0) !important;
+    transition: .3s;
+}
+#side-left{
+    background-color: #ccc;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+}
+#side-box{
+    padding: 10px 15px;
+}
+#side-title{
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.side-content-links{
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.side-content-links>div,#side-title{
+    display: flex;
+    align-items: center;
+}
+.side-img{
+    margin-right: 15px;
+}
+.side-img img{
+    width: 40px;
+    height: 40px;
+}
+#side-right{
+    background-color: #00000081;
+    width: 40%;
+    height: 100%;
+}
+.active-profile{
+    background-color: #D8FCF7 !important;
+}
+/* ******************* sidebar end *********************** */
+
+/* ******************* main start *********************** */
+#main-left{
+    display: none;
+}
+#content-div{
+    display: flex;
+    flex-direction: column;
+}
+#main-center{
+    order: 1;
+    margin: 20px 0;
+}
+#pasietn-profile{
+    padding: 20px 30px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+#pacient-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+#pacient-picture img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+.profile-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile-icon{
+    margin-right: 10px;
+}
+.profile-text p{
+    font: 500 14px Manrope;
+    color: var(--unnamed-color-072635);
+}
+.profile-text span{
+    color: var(--unnamed-color-072635);
+    font: bold 14px Manrope;
+}
+#show-pacient-information-btn{
+    text-align: center;
+    margin-top: 40px;
+}
+#show-pacient-information-btn button{
+    background: var(--activestate_bg_1);
+    border-radius: 41px;
+    padding: 12px 21px;
+    border: var(--activestate_bg_1);
+    cursor: pointer;
+}
+#lab-results-box{
+    background-color: #fff;
+    padding: 20px 30px 0 30px;
+}
+#lab-results{
+    max-height: 180px;
+    overflow-y: auto;
+}
+.lab-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    margin: 20px 0;
+    font: normal 14px Manrope;
+    color: var(--unnamed-color-072635);
+}
+#diagnosis{
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding: 20px 30px;
+}
+#blood-box{
+    background-color: #F4F0FE;
+    padding: 20px 10px;
+    border-radius: var(--border-radius);
+    margin: 40px 0;
+}
+#blood-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#statistics{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#sys-span, #dias-span{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+#dias-span{
+    background-color: #8C6FE6;
+}
+#sys-span{
+    background-color: #E66FD2;
+}
+#sys-text, #dias-text{
+    font: bold 14px Manrope;
+    margin-bottom: 10px;
+}
+#systolic-box, #diastolic-box{
+    padding: 20px 0;
+}
+#systolic-box>div, #diastolic-box>div{
+    font: bold 22px Manrope;
+}
+#respiratory, #temperature, #heart{
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+}
+#respiratory{
+    background-color: #E0F3FA;
+}
+#temperature{
+    background-color: #FFE6E9;
+}
+#heart{
+    background-color: #FFE6F1;
+}
+.temp-img{
+    margin-bottom: 20px;
+}
+.temp-text{
+    font: 600 16px Manrope;
+    margin-bottom: 10px;
+}
+.temp-value{
+    font: 800 30px Manrope;
+    margin: 10px 0 20px 0;
+}
+#diagnostic-list{
+    background-color: #fff;
+    padding: 20px 30px;
+    margin: 20px 0;
+}
+#diag-table{
+    background-color: #F6F7F8;
+    border-radius: 24px;
+    padding: 13px 10px;
+    margin: 20px 0;
+    display: flex;
+}
+#diag-table>p, #diag-list>li>p{
+    width: 30%;
+}
+#diag-table>span, #diag-list>li>span{
+    width: 20%;
+}
+#diag-table>div, #diag-list>li>div{
+    width: 50%;
+    padding: 0 5px;
+}
+#diag-list{
+    padding: 13px 10px 0 13px;
+    max-height: 140px;
+    overflow-y: auto;
+}
+#diag-list>li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* ******************* main end *********************** */
+
+/* ******************* footer start *********************** */
+footer{
+    margin-top: 20px;
+}
+footer> p{
+    padding: 20px 30px;
+    background-color: #fff;
+}
+/* ******************* footer end *********************** */
+
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    /* ******************* header start *********************** */
+    #small-logo{
+        display: none;
+    }
+    #large-logo{
+        display: block;
+    }
+    #dr-img{
+        padding-right: 10px;
+    }
+    .nav-menu-links{
+        padding: 12px 16px;
+    }
+    /* ******************* header end *********************** */
+    
+    /* ******************* main start *********************** */
+    #blood-box{
+        display: flex;
+        align-items: center;
+    }
+    #blood{
+        width: 75%;
+        padding-right: 10px;
+    }
+    #statistics{
+        width: 25%;
+        padding-left: 10px;
+        display: block;
+    }
+    #systolic-box{
+        border-bottom: 1px solid #CBC8D4;
+    }
+    #temp-box{
+        display: flex;
+    }
+    #respiratory-box, #temperature-box, #heart-box{
+        width: 33.33%;
+        padding: 0 5px;
+    }
+    /* ******************* main end *********************** */
+}
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        max-width: 980px;
+    }
+    /* ******************* header start *********************** */
+    #nav-btn-box,#sidebar{
+        display: none;
+    }
+    .nav-menu-text{
+        display: block;
+        margin-left: 5px
+    }
+    #settings-img{
+        display: block;
+        margin-left: 10px;
+    }
+    #settings-img img{
+        margin: 0 1px;
+    }
+    #respiratory, #temperature, #heart{
+        padding: 20px 10px;
+    }
+    /* ******************* header end *********************** */
+
+    /* ******************* main start *********************** */
+    main, footer{
+        padding: 0 10px;
+    }
+    #pasietn-profile, #lab-results-box, #diagnosis, #diagnostic-list, .patient-box, footer>p{
+        border-radius: var(--border-radius);
+    }
+    #content-div{
+        flex-direction: row;
+    }
+    #main-left{
+        display: block;
+        width: 25%;
+    }
+    #main-center{
+        margin: 0;
+        padding: 0 20px;
+        order: 0;
+        width: 50%;
+    }
+    #main-right{
+        width: 25%;
+    }
+    #lab-results{
+        max-height: 320px;
+    }
+    .patient-box{
+        background-color: #fff;
+        max-height: 1020px;
+        overflow-y: auto;
+    }
+    /* ******************* main end *********************** */
+}
+
+@media only screen and (min-width: 1200px) {
+    body{
+        padding: 20px;
+    }
+    main, footer{
+        padding: 0 ;
+    }
+    .container {
+        max-width: 1140px;
+    }
+    /* ******************* header start *********************** */
+    header{
+        border-radius: var(--border-radius);
+    }
+    #settings-img{
+        margin-left: 20px;
+    }
+    #settings-img img{
+        margin: 0 5px;
+    }
+    #dr-text{
+        display: block;
+    }
+    /* ******************* header end *********************** */
+
+    /* ******************* main start *********************** */
+    #respiratory, #temperature, #heart{
+        padding: 20px 30px;
+    }
+    /* ******************* main end *********************** */
+}
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
