@@ -131,6 +131,9 @@ header{
     transition: .3s;
     cursor: pointer;
 }
+.nav-menu-links>a{
+    color: #072635;
+}
 .nav-menu-links:hover{
     background: var(--activestate_bg_1);
 }
